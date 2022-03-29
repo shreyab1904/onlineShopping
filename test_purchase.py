@@ -2,9 +2,11 @@ import pytest
 
 @pytest.fixture
 def SetUp():
-    print("setup started")
+    print("Open Amazon")
+    print("USER LOGGED IN")
     yield
-    print("exited")
+    print("USER LOGGED OUT")
+    print("Close Amazon")
 
 def test_AddItemtoCart(SetUp):
     print("Added successfully")
